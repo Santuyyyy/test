@@ -131,7 +131,16 @@ body {
     margin-bottom: 10px;
     font-weight: 500;
 }
+.indikator ul {
+    list-style: decimal inside;
+    padding-left: 20px;
+}
 
-.langkah p {
+.indikator ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.indikator p {
     margin-bottom: 20px;
 }

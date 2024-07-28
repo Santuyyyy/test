@@ -8,20 +8,9 @@
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
     background-color: #f0f0f0;
 }
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin-top: 70px;
-}
-
 
 li {
     list-style: none;
@@ -164,108 +153,88 @@ header {
     }
 }
 
-.container {
+.fa-whatsapp {
+    font-size: 75px;
+}
+
+.wrapper {
     position: relative;
-    top: -50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.pembuka {
+    top: 23px;
+    padding-top: 100px; 
     text-align: center;
-    color: #351F65;
-    margin: 2rem 0;
-}
-
-.pembuka .awal {
-    font-size: 34px;
-    font-weight: 600;
-}
-
-.pembuka .akhir {
-    font-size: 18px;
-}
-
-.garis {
-    margin: 2rem 0;
-    border: 1px solid #351F65;
-}
-
-.artikel {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
 }
 
-.artikel-item {
-    flex: 1 1 calc(50% - 20px); 
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.gambar {
-    flex-shrink: 0;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-}
-
-.gambar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.text {
-    flex: 1;
+.konselor {
+    margin: 10px;
     padding: 10px;
-    color: #351F65;
-    font-size: 18px;
-}
-
-@media (max-width: 768px) {
-    .artikel-item {
-        flex: 1 1 100%;
-    }
-
-    .navbar {
-        padding: 0 10px;
-    }
-}
-
-footer {
-    background-color: gray;
-    padding: 0.8rem;
-    border-radius: 10px;
-    margin-top: 50px;
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
     text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
 }
 
-footer .penutup {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 15px;
+.konselor:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-footer .sosmed {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    font-size: 1rem;
+.fa-whatsapp {
+    font-size: 75px;
+    color: #25D366;
 }
 
-footer .sosmed div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.nama {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
-footer .sosmed p {
-    margin: 0;
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .findhelp {
+        display: none;
+    }
+
+    .navbar .togglebtn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    .wrapper {
+        padding-top: 80px;
+    }
+
+    .konselor {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+
+    .wrapper {
+        padding-top: 60px;
+    }
+
+    .konselor {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
 }
